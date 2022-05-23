@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["FRML.API/FRML.API.csproj", "FRML.API/"]
-RUN dotnet restore "FRML.API/FRML.API.csproj"
+COPY ["FRMK.API/FRMK.API.csproj", "FRMK.API/"]
+RUN dotnet restore "FRMK.API/FRMK.API.csproj"
 COPY . .
-WORKDIR "/src/FRML.API"
-RUN dotnet build "FRML.API.csproj" -c Release -o /app/build
+WORKDIR "/src/FRMK.API"
+RUN dotnet build "FRMK.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "FRML.API.csproj" -c Release -o /app/publish
+RUN dotnet publish "FRMK.API.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "FRML.API.dll"]
+ENTRYPOINT ["dotnet", "FRMK.API.dll"]

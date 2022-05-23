@@ -1,4 +1,4 @@
-﻿namespace FRML.API.UoW
+﻿namespace FRMK.API.UoW
 {
     public abstract class BaseUoW : IDisposable
     {

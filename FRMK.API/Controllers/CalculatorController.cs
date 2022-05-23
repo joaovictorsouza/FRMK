@@ -1,8 +1,8 @@
 using FRMK.Models.Responses;
-using FRML.API.UoW;
+using FRMK.API.UoW;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FRML.API.Controllers
+namespace FRMK.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

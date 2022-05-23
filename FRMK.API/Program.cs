@@ -1,5 +1,5 @@
 using FRMK.IoC;
-using FRML.API.UoW;
+using FRMK.API.UoW;
 
 var builder = WebApplication.CreateBuilder(args);
 

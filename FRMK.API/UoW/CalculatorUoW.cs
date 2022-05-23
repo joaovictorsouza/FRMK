@@ -1,6 +1,6 @@
 ﻿using FRMK.IBLL;
 
-namespace FRML.API.UoW
+namespace FRMK.API.UoW
 {
     public class CalculatorUoW : BaseUoW
     {
