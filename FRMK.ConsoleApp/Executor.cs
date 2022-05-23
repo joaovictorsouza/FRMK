@@ -23,16 +23,16 @@ namespace FRMK.ConsoleApp
             var value = Console.ReadLine();
             if (!int.TryParse(value, out number))
                 Console.WriteLine("Valor inválido, insira um número inteiro.");
-
-            var response = _calculator.GetDivisorsAndPrimeDivisors(number);
-
-            if(response != null)
+            else
             {
-                Console.WriteLine("Divisores:" + string.Join(", ", response.Divisors));
-                Console.WriteLine("Divisores Primos:" + string.Join(", ", response.PrimeDivisors));
-            }
+                var response = _calculator.GetDivisorsAndPrimeDivisors(number);
 
-            Console.WriteLine();
+                if (response != null)
+                {
+                    Console.WriteLine("Divisores:" + string.Join(", ", response.Divisors));
+                    Console.WriteLine("Divisores Primos:" + string.Join(", ", response.PrimeDivisors));
+                }
+            }
         }
     }
 }
